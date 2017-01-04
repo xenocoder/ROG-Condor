@@ -2539,6 +2539,12 @@ NS Package M08A</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,78.74,104.14,IC1P,V+,VA,,,"/>
+<approved hash="104,1,78.74,88.9,IC1P,V-,GND,,,"/>
+<approved hash="104,1,109.22,63.5,IC2P,V+,VA,,,"/>
+<approved hash="104,1,109.22,48.26,IC2P,V-,GND,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
