@@ -1097,6 +1097,13 @@ spacing: 4 holes (with body offset)
 <text x="-2.54" y="3.81" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="VA" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="VR">
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
+<text x="-2.54" y="3.81" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="VR" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="+9V(T)" prefix="+9V">
@@ -1263,6 +1270,24 @@ spacing: 4 holes (with body offset)
 &lt;/ul&gt;</description>
 <gates>
 <gate name="G$1" symbol="VA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VR" prefix="VR">
+<description>&lt;b&gt;Vr (Voltage Reference)&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;use for reduced voltage coming out of a voltage divider&lt;/li&gt;
+&lt;li&gt;an alternative on schematics for running hookup wire
+&lt;li&gt;automatically labels net "VR"
+&lt;/ul&gt;</description>
+<gates>
+<gate name="G$1" symbol="VR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -2088,33 +2113,30 @@ NS Package M08A</description>
 <part name="R4" library="mb_resistors" deviceset="6MM" device=".3" value="22k"/>
 <part name="R5" library="mb_resistors" deviceset="6MM" device=".3" value="100k"/>
 <part name="R6" library="mb_resistors" deviceset="6MM" device=".3" value="100k"/>
-<part name="R7" library="mb_resistors" deviceset="6MM" device=".3"/>
-<part name="R8" library="mb_resistors" deviceset="6MM" device=".3"/>
+<part name="R7" library="mb_resistors" deviceset="6MM" device=".3" value="100k"/>
+<part name="R8" library="mb_resistors" deviceset="6MM" device=".3" value="18k"/>
 <part name="R9" library="mb_resistors" deviceset="6MM" device=".3" value="22k"/>
 <part name="R10" library="mb_resistors" deviceset="6MM" device=".3" value="22k"/>
 <part name="R15" library="mb_resistors" deviceset="6MM" device=".3" value="22k"/>
 <part name="R16" library="mb_resistors" deviceset="6MM" device=".3" value="22k"/>
-<part name="R17" library="mb_resistors" deviceset="6MM" device=".3"/>
+<part name="R17" library="mb_resistors" deviceset="6MM" device=".3" value="100k"/>
 <part name="+9V1" library="mb_supply" deviceset="+9V(T)" device=""/>
 <part name="GND1" library="mb_supply" deviceset="GND(T)" device=""/>
-<part name="GND2" library="mb_supply" deviceset="GND(T)" device=""/>
 <part name="GND3" library="mb_supply" deviceset="GND" device=""/>
 <part name="GND4" library="mb_supply" deviceset="GND" device=""/>
 <part name="GND5" library="mb_supply" deviceset="GND" device=""/>
 <part name="GND6" library="mb_supply" deviceset="GND" device=""/>
 <part name="GND7" library="mb_supply" deviceset="GND" device=""/>
-<part name="GND8" library="mb_supply" deviceset="GND" device=""/>
-<part name="GND9" library="mb_supply" deviceset="GND" device=""/>
 <part name="IN1" library="mb_supply" deviceset="IN(T)" device=""/>
 <part name="OUT1" library="mb_supply" deviceset="OUT(T)" device=""/>
-<part name="LED" library="mb_supply" deviceset="PAD" device=""/>
+<part name="LED" library="mb_supply" deviceset="PAD" device="" value="LED"/>
 <part name="D1" library="mb_diodes" deviceset="LED" device="3MM"/>
 <part name="C1" library="mb_caps-chicklet" deviceset="075X040" device="2" value="0.047uF"/>
 <part name="C2" library="mb_caps-chicklet" deviceset="075X040" device="2" value="0.047uF"/>
 <part name="C3" library="mb_caps-chicklet" deviceset="075X040" device="2" value="0.047uF"/>
 <part name="TRIM" library="mb_pots" deviceset="POT" device="TRIM" value="100k"/>
 <part name="Q1" library="mb_trans" deviceset="J201" device=""/>
-<part name="D2" library="mb_diodes" deviceset="1N400X" device=".3"/>
+<part name="D2" library="mb_diodes" deviceset="1N400X" device=".3" value="1N4001"/>
 <part name="C4" library="mb_caps-electro" deviceset="050" device="1" value="22uF"/>
 <part name="VA1" library="mb_supply" deviceset="VA" device=""/>
 <part name="C5" library="mb_caps-chicklet" deviceset="075X040" device="2" value="0.001uF"/>
@@ -2126,11 +2148,11 @@ NS Package M08A</description>
 <part name="VA3" library="mb_supply" deviceset="VA" device=""/>
 <part name="GND10" library="mb_supply" deviceset="GND" device=""/>
 <part name="C8" library="mb_caps-chicklet" deviceset="075X040" device="2" value="0.0039uF"/>
-<part name="GND11" library="mb_supply" deviceset="GND" device=""/>
 <part name="VA4" library="mb_supply" deviceset="VA" device=""/>
 <part name="C9" library="mb_caps-electro" deviceset="050" device="1" value="22uF"/>
 <part name="GND12" library="mb_supply" deviceset="GND" device=""/>
 <part name="VA5" library="mb_supply" deviceset="VA" device=""/>
+<part name="VR1" library="mb_supply" deviceset="VR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2138,7 +2160,7 @@ NS Package M08A</description>
 </plain>
 <instances>
 <instance part="VOL" gate="G$1" x="185.42" y="48.26"/>
-<instance part="GAIN" gate="G$1" x="27.94" y="63.5"/>
+<instance part="GAIN" gate="G$1" x="35.56" y="63.5"/>
 <instance part="R1" gate="G$1" x="5.08" y="83.82" rot="R180"/>
 <instance part="R2" gate="G$1" x="0" y="60.96" rot="R90"/>
 <instance part="R3" gate="G$1" x="12.7" y="73.66" rot="R90"/>
@@ -2154,14 +2176,11 @@ NS Package M08A</description>
 <instance part="R17" gate="G$1" x="119.38" y="91.44" rot="R90"/>
 <instance part="+9V1" gate="+9V" x="-7.62" y="68.58" rot="R90"/>
 <instance part="GND1" gate="GND" x="12.7" y="45.72"/>
-<instance part="GND2" gate="GND" x="22.86" y="27.94"/>
-<instance part="GND3" gate="GND" x="25.4" y="45.72"/>
-<instance part="GND4" gate="GND" x="33.02" y="45.72"/>
+<instance part="GND3" gate="GND" x="33.02" y="45.72"/>
+<instance part="GND4" gate="GND" x="43.18" y="45.72"/>
 <instance part="GND5" gate="GND" x="78.74" y="83.82"/>
 <instance part="GND6" gate="GND" x="55.88" y="66.04"/>
 <instance part="GND7" gate="GND" x="66.04" y="66.04"/>
-<instance part="GND8" gate="GND" x="86.36" y="45.72"/>
-<instance part="GND9" gate="GND" x="78.74" y="45.72"/>
 <instance part="IN1" gate="G$1" x="-7.62" y="83.82"/>
 <instance part="OUT1" gate="G$1" x="193.04" y="48.26"/>
 <instance part="LED" gate="G$1" x="0" y="35.56" rot="R270"/>
@@ -2172,7 +2191,7 @@ NS Package M08A</description>
 <instance part="TRIM" gate="G$1" x="27.94" y="104.14"/>
 <instance part="Q1" gate="G$1" x="22.86" y="86.36"/>
 <instance part="D2" gate="1" x="7.62" y="68.58"/>
-<instance part="C4" gate="1" x="33.02" y="55.88"/>
+<instance part="C4" gate="1" x="43.18" y="55.88"/>
 <instance part="VA1" gate="G$1" x="5.08" y="78.74" rot="R90"/>
 <instance part="C5" gate="G$1" x="55.88" y="99.06" rot="R90"/>
 <instance part="C6" gate="G$1" x="55.88" y="81.28" rot="R180"/>
@@ -2187,11 +2206,11 @@ NS Package M08A</description>
 <instance part="VA3" gate="G$1" x="109.22" y="71.12"/>
 <instance part="GND10" gate="GND" x="109.22" y="43.18"/>
 <instance part="C8" gate="G$1" x="134.62" y="60.96"/>
-<instance part="GND11" gate="GND" x="83.82" y="33.02"/>
 <instance part="VA4" gate="G$1" x="111.76" y="83.82" rot="R90"/>
 <instance part="C9" gate="1" x="175.26" y="58.42" rot="R90"/>
 <instance part="GND12" gate="GND" x="182.88" y="35.56"/>
 <instance part="VA5" gate="G$1" x="25.4" y="116.84"/>
+<instance part="VR1" gate="G$1" x="22.86" y="68.58" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -2250,16 +2269,6 @@ NS Package M08A</description>
 <wire x1="0" y1="43.18" x2="0" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="D2" gate="1" pin="C"/>
-<wire x1="12.7" y1="68.58" x2="10.16" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="12.7" y1="66.04" x2="12.7" y2="68.58" width="0.1524" layer="91"/>
-<junction x="12.7" y="68.58"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND1" gate="GND" pin="GND"/>
@@ -2269,12 +2278,12 @@ NS Package M08A</description>
 <segment>
 <pinref part="GAIN" gate="G$1" pin="1"/>
 <pinref part="GND3" gate="GND" pin="GND"/>
-<wire x1="25.4" y1="55.88" x2="25.4" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="55.88" x2="33.02" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C4" gate="1" pin="-"/>
 <pinref part="GND4" gate="GND" pin="GND"/>
-<wire x1="33.02" y1="50.8" x2="33.02" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="50.8" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="P" pin="V-"/>
@@ -2300,21 +2309,6 @@ NS Package M08A</description>
 <pinref part="GND12" gate="GND" pin="GND"/>
 <pinref part="VOL" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="38.1" x2="182.88" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="Q1" gate="G$1" pin="S"/>
-<pinref part="GAIN" gate="G$1" pin="3"/>
-<wire x1="25.4" y1="81.28" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="GAIN" gate="G$1" pin="2"/>
-<pinref part="C4" gate="1" pin="+"/>
-<wire x1="30.48" y1="63.5" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="63.5" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VA" class="0">
@@ -2512,6 +2506,33 @@ NS Package M08A</description>
 <pinref part="VOL" gate="G$1" pin="2"/>
 <pinref part="OUT1" gate="G$1" pin="OUT"/>
 <wire x1="187.96" y1="48.26" x2="190.5" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="GAIN" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="60.96" x2="43.18" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="63.5" x2="38.1" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="GAIN" gate="G$1" pin="3"/>
+<pinref part="Q1" gate="G$1" pin="S"/>
+<wire x1="33.02" y1="71.12" x2="33.02" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="81.28" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VR" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="D2" gate="1" pin="C"/>
+<wire x1="12.7" y1="68.58" x2="10.16" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="12.7" y1="66.04" x2="12.7" y2="68.58" width="0.1524" layer="91"/>
+<junction x="12.7" y="68.58"/>
+<pinref part="VR1" gate="G$1" pin="VR"/>
+<wire x1="20.32" y1="68.58" x2="12.7" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

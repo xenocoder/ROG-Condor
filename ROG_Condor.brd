@@ -107,6 +107,9 @@
 <wire x1="45.39" y1="0" x2="45.39" y2="44.44" width="0" layer="20"/>
 <wire x1="45.39" y1="44.44" x2="0" y2="44.44" width="0" layer="20"/>
 <wire x1="0" y1="44.44" x2="0" y2="0" width="0" layer="20"/>
+<text x="44.7675" y="6.0325" size="1.27" layer="25" font="vector" rot="R90">Xenocoder Pedals v1.0 01.2017</text>
+<text x="13.335" y="29.5275" size="1.016" layer="25" font="vector" rot="R180">ROG Condor
+Cabsim</text>
 </plain>
 <libraries>
 <library name="mb_supply">
@@ -615,45 +618,115 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="+9V1" library="mb_supply" package="SQUARE" value="+9V(T)" x="8.89" y="2.54"/>
-<element name="C1" library="mb_caps-chicklet" package="075X040" value="0.047uF" x="15.24" y="34.29" rot="R90"/>
-<element name="C2" library="mb_caps-chicklet" package="075X040" value="0.047uF" x="12.7" y="11.43" rot="R270"/>
-<element name="C3" library="mb_caps-chicklet" package="075X040" value="0.047uF" x="7.62" y="11.43" rot="R90"/>
-<element name="C4" library="mb_caps-electro" package="050_020_1" value="22uF" x="5.08" y="36.83" rot="R180"/>
-<element name="C5" library="mb_caps-chicklet" package="075X040" value="0.001uF" x="20.32" y="34.29" rot="R270"/>
-<element name="C6" library="mb_caps-chicklet" package="075X040" value="0.015uF" x="33.655" y="26.035" rot="R180"/>
-<element name="C7" library="mb_caps-chicklet" package="075X040" value="0.0039uF" x="27.94" y="8.89" rot="R270"/>
-<element name="C8" library="mb_caps-chicklet" package="075X040" value="0.0039uF" x="35.56" y="34.29" rot="R90"/>
-<element name="C9" library="mb_caps-electro" package="050_020_1" value="22uF" x="40.64" y="29.21" rot="R90"/>
-<element name="D1" library="mb_diodes" package="LED3MM" value="LED3MM" x="22.86" y="2.54"/>
-<element name="D2" library="mb_diodes" package="DO41-3" value="1N4001" x="3.81" y="12.7" rot="R270"/>
-<element name="GAIN" library="mb_pots" package="16MM" value="B1K" x="8.89" y="41.91" rot="R180"/>
-<element name="GND1" library="mb_supply" package="SQUARE" value="GND(T)" x="12.7" y="2.54"/>
-<element name="IC1" library="mb_ics" package="DIL08" value="TL072P" x="24.13" y="20.32" rot="R270"/>
-<element name="IC2" library="mb_ics" package="DIL08" value="TL072P" x="35.56" y="17.145"/>
-<element name="IN1" library="mb_supply" package="SQUARE" value="IN(T)" x="2.54" y="2.54"/>
-<element name="LED" library="mb_supply" package="SQUARE" value="LED" x="29.21" y="2.54"/>
-<element name="OUT1" library="mb_supply" package="SQUARE" value="OUT(T)" x="43.18" y="2.54"/>
-<element name="Q1" library="mb_trans" package="TO92-" value="J201" x="8.89" y="31.75" rot="R180"/>
-<element name="R1" library="mb_resistors" package="R0207/3" value="18k" x="2.54" y="25.4" rot="R270"/>
-<element name="R10" library="mb_resistors" package="R0207/3" value="22k" x="35.56" y="6.35" rot="R270"/>
-<element name="R15" library="mb_resistors" package="R0207/3" value="22k" x="39.37" y="6.35" rot="R270"/>
-<element name="R16" library="mb_resistors" package="R0207/3" value="22k" x="31.75" y="34.925" rot="R90"/>
-<element name="R17" library="mb_resistors" package="R0207/3" value="100k" x="15.875" y="22.86" rot="R270"/>
-<element name="R2" library="mb_resistors" package="R0207/3" value="4k7" x="15.24" y="5.08" rot="R180"/>
-<element name="R3" library="mb_resistors" package="R0207/3" value="22k" x="12.7" y="22.86" rot="R90"/>
-<element name="R4" library="mb_resistors" package="R0207/3" value="22k" x="28.575" y="34.925" rot="R270"/>
-<element name="R5" library="mb_resistors" package="R0207/3" value="100k" x="22.86" y="41.91" rot="R180"/>
-<element name="R6" library="mb_resistors" package="R0207/3" value="100k" x="24.13" y="27.94"/>
-<element name="R7" library="mb_resistors" package="R0207/3" value="100k" x="24.13" y="34.925" rot="R90"/>
-<element name="R8" library="mb_resistors" package="R0207/3" value="18k" x="16.51" y="12.7" rot="R90"/>
-<element name="R9" library="mb_resistors" package="R0207/3" value="22k" x="22.86" y="10.16" rot="R90"/>
-<element name="TRIM" library="mb_pots" package="B25P" value="100k" x="7.62" y="22.86"/>
-<element name="VOL" library="mb_pots" package="16MM" value="B10k" x="36.83" y="41.91" rot="R180"/>
+<element name="+9V" library="mb_supply" package="SQUARE" value="+9V(T)" x="8.89" y="2.54" smashed="yes">
+<attribute name="NAME" x="6.6675" y="3.81" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="C1" library="mb_caps-chicklet" package="075X040" value="47nF" x="15.24" y="34.29" smashed="yes" rot="R90">
+<attribute name="VALUE" x="12.954" y="33.1105" size="1.27" layer="25" ratio="12" rot="R90"/>
+</element>
+<element name="C2" library="mb_caps-chicklet" package="075X040" value="47nF" x="12.7" y="11.43" smashed="yes" rot="R270">
+<attribute name="VALUE" x="11.203" y="15.3035" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="C3" library="mb_caps-chicklet" package="075X040" value="47nF" x="7.62" y="11.43" smashed="yes" rot="R90">
+<attribute name="VALUE" x="9.4345" y="16.764" size="1.27" layer="25" ratio="12" rot="R180"/>
+</element>
+<element name="C4" library="mb_caps-electro" package="050_020_1" value="22uF" x="5.08" y="36.83" smashed="yes" rot="R180">
+<attribute name="VALUE" x="0.9525" y="38.735" size="1.27" layer="25" ratio="12" rot="R270"/>
+</element>
+<element name="C5" library="mb_caps-chicklet" package="075X040" value="1nF" x="20.32" y="34.29" smashed="yes" rot="R270">
+<attribute name="VALUE" x="19.1405" y="38.481" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="C6" library="mb_caps-chicklet" package="075X040" value="15nF" x="33.655" y="26.035" smashed="yes" rot="R180">
+<attribute name="VALUE" x="35.152" y="23.749" size="1.27" layer="25" ratio="12" rot="R180"/>
+</element>
+<element name="C7" library="mb_caps-chicklet" package="075X040" value="3.9nF" x="27.94" y="8.89" smashed="yes" rot="R270">
+<attribute name="VALUE" x="31.369" y="7.0755" size="1.27" layer="25" ratio="12" rot="R90"/>
+</element>
+<element name="C8" library="mb_caps-chicklet" package="075X040" value="3.9nF" x="35.56" y="34.29" smashed="yes" rot="R90">
+<attribute name="VALUE" x="39.3065" y="32.158" size="1.27" layer="25" ratio="12" rot="R90"/>
+</element>
+<element name="C9" library="mb_caps-electro" package="050_020_1" value="22uF" x="40.64" y="29.21" smashed="yes" rot="R90">
+<attribute name="VALUE" x="42.545" y="26.035" size="1.27" layer="25" ratio="12" rot="R180"/>
+</element>
+<element name="D1" library="mb_diodes" package="LED3MM" value="LED3MM" x="22.86" y="2.54" smashed="yes"/>
+<element name="D2" library="mb_diodes" package="DO41-3" value="1N4001" x="3.81" y="12.7" smashed="yes" rot="R270">
+<attribute name="VALUE" x="1.016" y="15.875" size="1.27" layer="25" ratio="12" rot="R270"/>
+</element>
+<element name="GAIN" library="mb_pots" package="16MM" value="B1K" x="8.89" y="41.91" smashed="yes" rot="R180">
+<attribute name="NAME" x="15.24" y="39.6875" size="1.27" layer="21" ratio="12" rot="R180"/>
+<attribute name="VALUE" x="10.4775" y="39.6875" size="1.27" layer="25" ratio="12" rot="R180"/>
+</element>
+<element name="GND" library="mb_supply" package="SQUARE" value="GND(T)" x="12.7" y="2.54" smashed="yes">
+<attribute name="NAME" x="14.2875" y="1.27" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="IC1" library="mb_ics" package="DIL08" value="TL072P" x="24.13" y="20.32" smashed="yes" rot="R270">
+<attribute name="VALUE" x="23.1775" y="23.5585" size="1.27" layer="25" font="vector" ratio="12" rot="R270"/>
+</element>
+<element name="IC2" library="mb_ics" package="DIL08" value="TL072P" x="35.56" y="17.145" smashed="yes">
+<attribute name="VALUE" x="32.639" y="16.51" size="1.27" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="IN" library="mb_supply" package="SQUARE" value="IN(T)" x="2.54" y="2.54" smashed="yes">
+<attribute name="NAME" x="3.81" y="1.905" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="LED" library="mb_supply" package="SQUARE" value="LED" x="29.21" y="2.54" smashed="yes">
+<attribute name="NAME" x="30.48" y="1.905" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="OUT" library="mb_supply" package="SQUARE" value="OUT(T)" x="43.18" y="2.54" smashed="yes">
+<attribute name="NAME" x="40.9575" y="4.1275" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="Q1" library="mb_trans" package="TO92-" value="J201" x="8.89" y="31.75" smashed="yes" rot="R180">
+<attribute name="VALUE" x="11.049" y="34.925" size="1.27" layer="25" ratio="12" rot="R180"/>
+</element>
+<element name="R1" library="mb_resistors" package="R0207/3" value="18k" x="2.54" y="25.4" smashed="yes" rot="R270">
+<attribute name="VALUE" x="1.905" y="27.305" size="1.27" layer="25" font="vector" ratio="12" rot="R270"/>
+</element>
+<element name="R10" library="mb_resistors" package="R0207/3" value="22k" x="35.56" y="6.35" smashed="yes" rot="R270">
+<attribute name="VALUE" x="34.925" y="7.9375" size="1.27" layer="25" font="vector" ratio="12" rot="R270"/>
+</element>
+<element name="R15" library="mb_resistors" package="R0207/3" value="22k" x="39.37" y="6.35" smashed="yes" rot="R270">
+<attribute name="VALUE" x="38.735" y="7.62" size="1.27" layer="25" font="vector" ratio="12" rot="R270"/>
+</element>
+<element name="R16" library="mb_resistors" package="R0207/3" value="22k" x="31.75" y="34.925" smashed="yes" rot="R90">
+<attribute name="VALUE" x="32.385" y="33.655" size="1.27" layer="25" font="vector" ratio="12" rot="R90"/>
+</element>
+<element name="R17" library="mb_resistors" package="R0207/3" value="100k" x="15.875" y="22.86" smashed="yes" rot="R270">
+<attribute name="VALUE" x="15.24" y="25.0825" size="1.27" layer="25" font="vector" ratio="12" rot="R270"/>
+</element>
+<element name="R2" library="mb_resistors" package="R0207/3" value="4k7" x="15.24" y="5.08" smashed="yes" rot="R180">
+<attribute name="VALUE" x="16.8275" y="5.715" size="1.27" layer="25" font="vector" ratio="12" rot="R180"/>
+</element>
+<element name="R3" library="mb_resistors" package="R0207/3" value="22k" x="12.7" y="22.86" smashed="yes" rot="R90">
+<attribute name="VALUE" x="13.335" y="21.59" size="1.27" layer="25" font="vector" ratio="12" rot="R90"/>
+</element>
+<element name="R4" library="mb_resistors" package="R0207/3" value="22k" x="28.575" y="34.925" smashed="yes" rot="R270">
+<attribute name="VALUE" x="27.94" y="36.83" size="1.27" layer="25" font="vector" ratio="12" rot="R270"/>
+</element>
+<element name="R5" library="mb_resistors" package="R0207/3" value="100k" x="22.86" y="41.91" smashed="yes" rot="R180">
+<attribute name="VALUE" x="25.0825" y="42.545" size="1.27" layer="25" font="vector" ratio="12" rot="R180"/>
+</element>
+<element name="R6" library="mb_resistors" package="R0207/3" value="100k" x="24.13" y="27.94" smashed="yes">
+<attribute name="VALUE" x="22.225" y="27.305" size="1.27" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="R7" library="mb_resistors" package="R0207/3" value="100k" x="24.13" y="34.925" smashed="yes" rot="R90">
+<attribute name="VALUE" x="24.765" y="33.02" size="1.27" layer="25" font="vector" ratio="12" rot="R90"/>
+</element>
+<element name="R8" library="mb_resistors" package="R0207/3" value="18k" x="16.51" y="12.7" smashed="yes" rot="R90">
+<attribute name="VALUE" x="17.145" y="11.1125" size="1.27" layer="25" font="vector" ratio="12" rot="R90"/>
+</element>
+<element name="R9" library="mb_resistors" package="R0207/3" value="22k" x="22.86" y="10.16" smashed="yes" rot="R90">
+<attribute name="VALUE" x="23.495" y="8.89" size="1.27" layer="25" font="vector" ratio="12" rot="R90"/>
+</element>
+<element name="TRIM" library="mb_pots" package="B25P" value="100k" x="7.62" y="22.86" smashed="yes">
+<attribute name="VALUE" x="5.7404" y="20.0025" size="1.27" layer="25" ratio="12"/>
+</element>
+<element name="VOL" library="mb_pots" package="16MM" value="B10k" x="36.83" y="41.91" smashed="yes" rot="R180">
+<attribute name="NAME" x="41.275" y="39.6875" size="1.27" layer="21" ratio="12" rot="R180"/>
+<attribute name="VALUE" x="37.465" y="39.6875" size="1.27" layer="25" ratio="12" rot="R180"/>
+</element>
 </elements>
 <signals>
 <signal name="IN">
-<contactref element="IN1" pad="1"/>
+<contactref element="IN" pad="1"/>
 <contactref element="R1" pad="2"/>
 <wire x1="2.54" y1="21.59" x2="1.27" y2="20.32" width="0.6096" layer="1"/>
 <wire x1="1.27" y1="20.32" x2="1.27" y2="5.08" width="0.6096" layer="1"/>
@@ -677,7 +750,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="15.24" y1="31.75" x2="11.43" y2="31.75" width="0.6096" layer="1"/>
 </signal>
 <signal name="+9V">
-<contactref element="+9V1" pad="1"/>
+<contactref element="+9V" pad="1"/>
 <contactref element="D2" pad="A"/>
 <contactref element="R2" pad="2"/>
 <wire x1="11.43" y1="5.08" x2="10.16" y2="5.08" width="0.6096" layer="1"/>
@@ -698,7 +771,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="29.21" y1="2.54" x2="24.13" y2="2.54" width="0.6096" layer="1"/>
 </signal>
 <signal name="GND">
-<contactref element="GND1" pad="1"/>
+<contactref element="GND" pad="1"/>
 <contactref element="R4" pad="1"/>
 <contactref element="GAIN" pad="1"/>
 <contactref element="C4" pad="-"/>
@@ -877,7 +950,7 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="OUT">
 <contactref element="VOL" pad="2"/>
-<contactref element="OUT1" pad="1"/>
+<contactref element="OUT" pad="1"/>
 <wire x1="36.83" y1="41.91" x2="39.37" y2="39.37" width="0.6096" layer="1"/>
 <wire x1="39.37" y1="39.37" x2="41.91" y2="39.37" width="0.6096" layer="1"/>
 <wire x1="41.91" y1="39.37" x2="43.18" y2="38.1" width="0.6096" layer="1"/>
@@ -917,4 +990,10 @@ Please make sure your boards conform to these design rules.</description>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

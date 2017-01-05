@@ -2133,6 +2133,8 @@ NS Package M08A</description>
 <part name="VA3" library="mb_supply" deviceset="VA" device=""/>
 <part name="GND10" library="mb_supply" deviceset="GND" device=""/>
 <part name="C8" library="mb_caps-chicklet" deviceset="075X040" device="2" value="0.0039uF"/>
+<part name="GND11" library="mb_supply" deviceset="GND" device=""/>
+<part name="VA4" library="mb_supply" deviceset="VA" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2157,7 +2159,7 @@ NS Package M08A</description>
 <instance part="R14" gate="G$1" x="48.26" y="-20.32" rot="R90"/>
 <instance part="R15" gate="G$1" x="127" y="55.88" rot="R180"/>
 <instance part="R16" gate="G$1" x="142.24" y="55.88" rot="R180"/>
-<instance part="R17" gate="G$1" x="129.54" y="33.02" rot="R90"/>
+<instance part="R17" gate="G$1" x="119.38" y="91.44" rot="R90"/>
 <instance part="R18" gate="G$1" x="137.16" y="30.48" rot="R90"/>
 <instance part="R19" gate="G$1" x="142.24" y="27.94" rot="R90"/>
 <instance part="R20" gate="G$1" x="147.32" y="27.94" rot="R90"/>
@@ -2196,6 +2198,8 @@ NS Package M08A</description>
 <instance part="VA3" gate="G$1" x="109.22" y="71.12"/>
 <instance part="GND10" gate="GND" x="109.22" y="43.18"/>
 <instance part="C8" gate="G$1" x="134.62" y="60.96"/>
+<instance part="GND11" gate="GND" x="83.82" y="33.02"/>
+<instance part="VA4" gate="G$1" x="111.76" y="83.82" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2332,6 +2336,12 @@ NS Package M08A</description>
 <pinref part="VA3" gate="G$1" pin="VA"/>
 <wire x1="109.22" y1="63.5" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="1"/>
+<pinref part="VA4" gate="G$1" pin="VA"/>
+<wire x1="119.38" y1="86.36" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="83.82" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$10" class="0">
 <segment>
@@ -2398,6 +2408,8 @@ NS Package M08A</description>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="B" pin="+IN"/>
 <wire x1="111.76" y1="96.52" x2="119.38" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="2"/>
+<junction x="119.38" y="96.52"/>
 </segment>
 </net>
 <net name="N$16" class="0">
